@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-background-light: var(--color-gray-50);
+  --color-background: var(--color-gray-100);
+  --color-background-dark: var(--color-gray-200);
+
+  --color-foreground-light: var(--color-gray-600);
+  --color-foreground: var(--color-gray-700);
+  --color-foreground-dark: var(--color-gray-800);
+
+  --color-fixed-light: var(--color-gray-200);
+  --color-fixed: var(--color-gray-300);
+  --color-fixed-dark: var(--color-gray-400);
+
+  --color-primary-light: var(--color-blue-700);
+  --color-primary: var(--color-blue-800);
+  --color-primary-dark: var(--color-blue-900);
+
+  --color-secondary-light: var(--color-sky-400);
+  --color-secondary: var(--color-sky-500);
+  --color-secondary-dark: var(--color-sky-600);
+
+  --color-danger-light: var(--color-red-500);
+  --color-danger: var(--color-red-600);
+  --color-danger-dark: var(--color-red-700);
+
+  --color-warning-light: var(--color-amber-400);
+  --color-warning: var(--color-amber-500);
+  --color-warning-dark: var(--color-amber-600);
+
+  --color-info-light: var(--color-blue-400);
+  --color-info: var(--color-blue-500);
+  --color-info-dark: var(--color-blue-600);
+
+  --color-success-light: var(--color-emerald-400);
+  --color-success: var(--color-emerald-500);
+  --color-success-dark: var(--color-emerald-600);
+
+  --shadow-2xs: 0 0 1px 0 rgb(0 0 0 / 0.2);
+  --shadow-xs: 0 0 2px 0 rgb(0 0 0 / 0.4);
+  --shadow-sm: 0 0 3px 0 rgb(0 0 0 / 0.3), 0 1px 2px -1px rgb(0 0 0 / 0.3);
+  --shadow-md: 0 0 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.3);
+  --shadow-lg: 0 0 15px -3px rgb(0 0 0 / 0.2), 0 4px 6px -4px rgb(0 0 0 / 0.2);
+  --shadow-xl: 0 0 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-2xl: 0 0 50px -12px rgb(0 0 0 / 0.2);
+
+  --animate-slide-up: slide-up 300ms both, fade-out 300ms both;
+  --animate-slide-down: slide-down 300ms 300ms both, fade-in 300ms 300ms both;
+
+  --animate-forward-in: slide-forward-in 400ms ease-out both;
+  --animate-forward-out: slide-forward-out 400ms ease-out both;
+  --animate-backward-in: slide-backward-in 400ms ease-out both;
+  --animate-backward-out: slide-backward-out 400ms ease-out both;
+
+  --animate-scale-out:
+    scale-out 200ms ease-in forwards, fade-out 200ms ease-in forwards;
+  --animate-scale-in:
+    scale-in 200ms ease-in forwards, fade-in 200ms ease-in forwards;
+}
+
+:root {
+  @variant dark {
+    --color-background-light: var(--color-gray-600);
+    --color-background: var(--color-gray-700);
+    --color-background-dark: var(--color-gray-800);
+
+    --color-foreground-light: var(--color-gray-50);
+    --color-foreground: var(--color-gray-100);
+    --color-foreground-dark: var(--color-gray-200);
+  }
+}

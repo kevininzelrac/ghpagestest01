@@ -1,0 +1,220 @@
+@import "./reset.css";
+@import "./tailwind.css";
+/* @import "highlight.js/styles/github.css"; */
+
+html {
+  @apply overflow-y-scroll;
+  @apply bg-background-dark;
+  @apply font-sans antialiased;
+  @apply transition-colors duration-500;
+}
+
+body {
+  @apply flex flex-col gap-0.5;
+  @apply min-h-screen mx-auto;
+  @apply text-foreground-dark;
+}
+
+body > header {
+  @apply flex items-center justify-between;
+  @apply text-fixed;
+  @apply w-full p-6 z-10;
+  @apply sticky top-0;
+  @apply shadow-md;
+  @apply bg-gradient-to-b from-primary-dark to-primary;
+  view-transition-name: header;
+}
+
+::view-transition-group(header) {
+  z-index: 10;
+}
+
+nav {
+  @apply flex items-center justify-end gap-1;
+  @apply w-full;
+}
+
+button,
+a {
+  @apply cursor-pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+@utility btn-core {
+  @apply flex items-center justify-center;
+  @apply w-fit py-2 px-4;
+  @apply border border-transparent rounded-sm;
+  @apply text-fixed-light font-bold text-sm;
+  @apply [&>svg]:h-5;
+  @apply transition-colors duration-100;
+  @apply disabled:cursor-not-allowed;
+  @apply disabled:opacity-70;
+}
+
+[data-navlink] {
+  @apply btn-core;
+  @apply bg-primary hover:bg-primary-dark;
+  @apply [&.active]:bg-primary-light;
+  @apply [&.pending]:bg-primary-dark [&.pending]:text-fixed-dark;
+  @apply shadow-xl;
+}
+
+[data-link] {
+  @apply text-primary-light hover:text-primary;
+}
+
+[data-btn-primary] {
+  @apply btn-core;
+  @apply bg-primary hover:bg-primary-dark;
+}
+
+[data-btn-secondary] {
+  @apply btn-core;
+  @apply bg-secondary hover:bg-secondary-dark;
+}
+
+[data-btn-danger] {
+  @apply btn-core;
+  @apply bg-danger hover:bg-danger-dark;
+}
+
+[data-btn-warning] {
+  @apply btn-core;
+  @apply bg-warning hover:bg-warning-dark;
+}
+
+[data-btn-info] {
+  @apply btn-core;
+  @apply bg-info hover:bg-info-dark;
+}
+
+[data-btn-success] {
+  @apply btn-core;
+  @apply bg-success hover:bg-success-dark;
+}
+
+@utility h-core {
+  @apply font-bold;
+  @apply text-foreground-dark;
+  @apply whitespace-nowrap;
+  @apply transition-colors duration-500;
+}
+
+h1 {
+  @apply h-core text-4xl text-fixed;
+}
+
+h2 {
+  @apply h-core text-3xl;
+}
+
+h3 {
+  @apply h-core text-2xl;
+}
+
+h4 {
+  @apply h-core text-xl;
+}
+
+h5 {
+  @apply h-core text-lg;
+}
+
+h6 {
+  @apply h-core text-foreground;
+}
+
+main {
+  @apply flex flex-col gap-4;
+  @apply min-w-md max-w-4xl w-full mx-auto p-2;
+  @apply z-0 relative;
+  /* view-transition-name: main; */
+}
+
+/* ::view-transition-image-pair(main) {
+  isolation: isolate;
+}
+
+::view-transition-old(main) {
+  @apply animate-slide-up;
+  mix-blend-mode: plus-lighter;
+}
+
+::view-transition-new(main) {
+  @apply animate-slide-down;
+  mix-blend-mode: plus-lighter;
+} */
+
+main > header {
+  @apply flex items-center justify-between gap-1;
+  @apply w-full;
+}
+
+main > section,
+main > article > section {
+  @apply flex flex-col gap-2;
+  @apply w-full;
+}
+
+article {
+  @apply flex flex-col gap-2 w-full p-4;
+  @apply transition-colors duration-500;
+  @apply bg-background rounded border border-fixed;
+}
+
+/* form {
+  @apply flex flex-col justify-start w-full gap-2;
+} */
+
+fieldset {
+  @apply px-2 py-1;
+  @apply bg-background rounded border border-fixed;
+}
+
+legend {
+  @apply text-sm font-medium;
+}
+
+label {
+  @apply text-sm font-semibold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+textarea {
+  @apply block w-full px-3 py-2 border rounded-sm focus:outline-none focus:ring-primary focus:border-primary sm:text-sm;
+  @apply border-fixed-dark;
+}
+
+input[type="checkbox"] {
+  @apply cursor-pointer;
+}
+
+/* input[type="file"] {
+  @apply flex items-center justify-center;
+  @apply h-9 w-full p-0 m-0;
+  @apply bg-background-dark rounded text-foreground text-sm;
+  @apply file:bg-primary file:rounded-l file:text-fixed file:font-semibold file:h-full file:p-2;
+} */
+/* input[type="file"] {
+  @apply file:bg-primary file:text-fixed file:rounded;
+  @apply file:py-2 file:px-4;
+  @apply file:text-sm file:font-semibold file:h-full;
+  @apply file:cursor-pointer;
+  @apply bg-background-dark text-foreground w-full;
+  @apply transition-colors duration-500;
+} */
+input[type="file"] {
+  @apply w-full  p-0 m-0 bg-background rounded text-foreground text-sm;
+  @apply file:bg-primary file:rounded-l file:text-background file:font-semibold file:h-full file:px-4 file:py-2;
+}
+
+/* form > button[type="submit"] {
+  @apply btn-core;
+  @apply bg-primary hover:bg-primary-dark;
+} */

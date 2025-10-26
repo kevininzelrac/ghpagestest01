@@ -1,0 +1,16 @@
+[
+  {
+    "slug": "post01",
+    "title": "Mon Premier Article",
+    "date": "2024-10-26",
+    "author": "Auteur",
+    "excerpt": "Voici le contenu de mon article en Markdown avec des images et des vidéos."
+  },
+  {
+    "slug": "post02",
+    "title": "Mon Deuxième Article",
+    "date": "2024-10-27",
+    "author": "Auteur",
+    "excerpt": "Voici le contenu de mon article en Markdown avec des images et des vidéos."
+  }
+]
