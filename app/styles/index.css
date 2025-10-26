@@ -1,6 +1,5 @@
 @import "./reset.css";
 @import "./tailwind.css";
-/* @import "highlight.js/styles/github.css"; */
 
 html {
   @apply overflow-y-scroll;
@@ -21,7 +20,7 @@ body > header {
   @apply w-full p-6 z-10;
   @apply sticky top-0;
   @apply shadow-md;
-  @apply bg-gradient-to-b from-primary-dark to-primary;
+  @apply bg-linear-to-b from-primary-dark to-primary;
   view-transition-name: header;
 }
 
