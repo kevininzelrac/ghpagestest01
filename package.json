@@ -1,5 +1,6 @@
 {
   "name": "ghpagestest01",
+  "homepage": "https://amodhakal.github.io/portfolio",
   "private": true,
   "type": "module",
   "scripts": {

@@ -4,5 +4,5 @@ export default {
   // Config options...
   // Server-side render by default, to enable SPA mode set this to `false`
   ssr: false,
-  // basename: "/ghpagestest01",
+  basename: "/ghpagestest01",
 } satisfies Config;
